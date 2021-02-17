@@ -1,0 +1,18 @@
+# Maven
+target/
+pom.xml.versionsBackup
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.settings/
+.classpath
+.project
+
+# Lombok
+*.lombok
+
+# Mac OS
+.DS_Store
