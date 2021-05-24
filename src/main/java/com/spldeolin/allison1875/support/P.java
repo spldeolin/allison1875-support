@@ -7,6 +7,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * 代表该Javabean作为属性时包装在Page中
+ *
  * 适配Allison 1875 handler-transformer
  *
  * @author Deolin 2020-01-11
