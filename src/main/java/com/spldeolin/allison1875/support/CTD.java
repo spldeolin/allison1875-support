@@ -13,6 +13,8 @@ public class CTD {
     private final static UnsupportedOperationException e = new UnsupportedOperationException();
 
     /**
+     * 实例按类型转换
+     *
      * @param from 源Javabean
      * @param to 目标Javabean的类型
      * @return 转换后的Javabean
@@ -23,6 +25,8 @@ public class CTD {
 
 
     /**
+     * 实例转换到提供的实例
+     *
      * @param from 源Javabean
      * @param to 目标Javabean（已初始化的）
      * @return 转换后的Javabean
@@ -32,6 +36,8 @@ public class CTD {
     }
 
     /**
+     * 列表按类型转换
+     *
      * @param from 多个源Javabean
      * @param to 目标Javabean的类型
      * @return 多个转换后的Javabean
