@@ -1,6 +1,5 @@
 package com.spldeolin.allison1875.support;
 
-import java.util.function.Function;
 
 /**
  * @author Deolin 2023-05-01
@@ -13,10 +12,10 @@ public final class StarSchema {
     /**
      * 指定事实表
      *
-     * @param centralFactTablePrimaryKeyGetter 事实表的主键getter方法引用
+     * @param centralFactTablePrimaryKey 事实表的主键
      * @param primaryKey 主键
      */
-    public static <E, K> Cft<K> cft(Function<E, K> centralFactTablePrimaryKeyGetter, K primaryKey) {
+    public static <E, K> Cft<K> cft(EntityKey<E, K> centralFactTablePrimaryKey, K primaryKey) {
         throw e;
     }
 
@@ -25,18 +24,18 @@ public final class StarSchema {
         /**
          * 指定维度表（事实-维度关联关系是One to One）
          *
-         * @param dimensionTableForeignKeyGetter 维度表关联事实表的外键getter方法引用
+         * @param dimensionTableForeignKey 维度表关联事实表的外键
          */
-        public <E> Cft<K> oo(Function<E, K> dimensionTableForeignKeyGetter) {
+        public <E> Cft<K> oo(EntityKey<E, K> dimensionTableForeignKey) {
             throw e;
         }
 
         /**
          * 指定维度表（事实-维度关联关系是One to Many）
          *
-         * @param dimensionTableForeignKeyGetter 维度表关联事实表的外键getter方法引用
+         * @param dimensionTableForeignKey 维度表关联事实表的外键
          */
-        public <E> Om<E, K> om(Function<E, K> dimensionTableForeignKeyGetter) {
+        public <E> Om<E, K> om(EntityKey<E, K> dimensionTableForeignKey) {
             throw e;
         }
 
@@ -51,18 +50,18 @@ public final class StarSchema {
         /**
          * 为One to Many关系的维度表指定其他需要关注的key，映射到Map
          *
-         * @param dtKeyGetter 维度表key的getter方法引用
+         * @param dimensionTableKey 维度表key的
          */
-        public Om<E, K> key(Function<E, ?> dimensionTableKeyGetter) {
+        public Om<E, K> key(EntityKey<E, ?> dimensionTableKey) {
             throw e;
         }
 
         /**
          * 为One to Many关系的维度表指定其他需要关注的key，映射到Multimap
          *
-         * @param dtKeyGetter 维度表key的getter方法引用
+         * @param dtKeyGetter 维度表key
          */
-        public Om<E, K> mkey(Function<E, ?> dimensionTableKeyGetter) {
+        public Om<E, K> mkey(EntityKey<E, ?> dimensionTableKey) {
             throw e;
         }
 
